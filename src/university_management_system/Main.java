@@ -4,6 +4,8 @@
  */
 package university_management_system;
 
+import java.util.Scanner;
+
 /**
  *
  * @author dulan
@@ -13,6 +15,76 @@ public class Main {
     static void displayWelcomeMessage(){
          System.out.println("===== UNIVERSITY STUDENT MANAGEMENT SYSTEM =====");
          System.out.println("");
+    }
+    
+        static void loadMainMenu(){
+        
+        System.out.println(" 1.  Add New Student");
+        System.out.println(" 2.  View All Students");
+        System.out.println(" 3.  Search Student by ID");
+        System.out.println(" 4.  Add Course");
+        System.out.println(" 5.  View All Course");
+        System.out.println(" 6.  Add Marks For a Student");
+        System.out.println(" 7.  Calculate Grade");
+        System.out.println(" 8.  Generate Student Report");
+        System.out.println(" 9. Exit ");
+        
+        System.out.println("");
+        
+        Scanner scanner1 = new Scanner(System.in);
+        
+        System.out.println("Enter your Choice : ");
+        int choice = scanner1.nextInt();
+           
+             switch(choice){
+                 case 1 :
+                     System.out.println("Add New Student");
+                     Student student1 = new Student();
+                     student1.addStudent();
+                     
+                     break;
+                     
+                 case 2 :
+                     System.out.println("View All Student");
+                     Student student2 = new Student();
+                     student2.viewAllStudents();
+                     
+                     break;
+                     
+                 case 3 :
+                     System.out.println("Search Student by ID");
+                     Student student3 = new Student();
+                     student3.searchStudent();
+                     break;
+                 case 4 :
+                     System.out.println("Add Course");
+                     Course course1 = new Course();
+                     course1.addCourses();
+                     break;
+                 case 5 :
+                     System.out.println("View All Course");
+                     Course course2 = new Course();
+                     course2.viewAllCourses();
+                     break;
+                 case 6:
+                     System.out.println("Add Marks For a Student");
+                     Result result = new Result();
+                      result.addMark();
+                     break;
+                 case 7:
+                     System.out.println("Calculate Grade");
+                     break;
+                 case 8:
+                     System.out.println("Generate Student Report");
+                     break;
+                 
+                 case 9:
+                     System.out.println("Thank you!!! ");
+                     System.out.println("Come Again");
+                     break;
+                 default:
+                     System.out.println("Invalid Choice");
+             }
     }
     
     public static void main(String[] args) {

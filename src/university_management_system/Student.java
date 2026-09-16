@@ -79,7 +79,58 @@ public class Student extends Person{
     
     @Override
     void addStudent() {
-        
+         String addAgain = "Yes";
+         
+           
+             
+           System.out.println("===== ADD NEW Students ===== ");
+           
+           do {
+               
+                    System.out.print("Enter Student ID :- ");
+                      this.studentId = scanner.nextLine();
+          
+                   System.out.print("Enter Registration Number :- ");
+                      this.registrationNumber = scanner.nextLine();
+           
+                   System.out.print("Enter Index Number :- ");
+                      this.indexNumber = scanner.nextLine();
+           
+                   System.out.print("Enter Name :- ");
+                      this.name = scanner.nextLine();
+           
+                   System.out.print("Enter Degree programme :-");
+                      this.degreeProgram = scanner.nextLine();
+           
+                   System.out.print("Enter current year :- ");
+                      this.currentYear = scanner.nextInt();
+           
+                   System.out.print("Enter current Semester :- ");
+                      this.currentSemester = scanner.nextInt();
+           
+                   System.out.print("Enter Email :- ");
+                      this.email = scanner.nextLine();
+           
+               Student student = new Student(studentId, registrationNumber, indexNumber, name, degreeProgram, currentYear, currentSemester, email);
+                Students.add(student);
+            
+                FileManager filemanager = new FileManager();
+                 filemanager.saveStudentData(student);
+            
+                System.out.print("\nAdd again (Yes/No):  ");  
+                addAgain = scanner.nextLine();
+                 
+             System.out.println("");
+             
+           }while(addAgain.equals("Yes")) ;
+              
+              System.out.println("");
+              
+              Main.displayWelcomeMessage();
+               Main.loadMainMenu();
+               
+               scanner.close();
+           
          
          
           

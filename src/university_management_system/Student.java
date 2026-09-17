@@ -135,6 +135,17 @@ public class Student extends Person{
          
           
     }
+    public  void viewAllStudents(){
+      
+         System.out.println("\n====== View All Student ======\n");
+         
+         FileManager manager1 = new FileManager();
+         manager1.readAllStudents();
+         
+          
+         System.out.println();
+    }
+    
      
     
      

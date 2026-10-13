@@ -166,7 +166,7 @@ public class Student extends Person{
          Main.loadMainMenu();
           System.out.println("");
          
-          
+          System.out.println("");
     }
         
 

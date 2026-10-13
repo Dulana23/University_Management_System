@@ -147,7 +147,29 @@ public class Student extends Person{
     }
     
     
-     
+    public void searchStudent(){
+        
+        String searchedId;
+        
+        
+        
+        System.out.println("\n====== Search Student ======");
+         
+        System.out.print("Enter Student ID :- ");
+         searchedId = scanner.nextLine().trim();
+         
+         FileManager fileMananger = new FileManager();
+           fileMananger.searchStudentById(searchedId);
+         System.out.println();
+         
+         Main.displayWelcomeMessage();
+         Main.loadMainMenu();
+         
+         
+          
+    }
+        
+
     
      
 }

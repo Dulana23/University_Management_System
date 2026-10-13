@@ -164,7 +164,7 @@ public class Student extends Person{
          
          Main.displayWelcomeMessage();
          Main.loadMainMenu();
-         
+          System.out.println("");
          
           
     }
